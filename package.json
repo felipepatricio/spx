@@ -7,9 +7,39 @@
     "build": "next build",
     "start": "next start"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknow"
+  },
   "dependencies": {
+    "@types/node": "^14.14.37",
+    "@types/react": "^17.0.3",
+    "axios": "^0.21.1",
+    "cors": "^2.8.5",
     "next": "10.0.9",
-    "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react": "^17.0.2",
+    "react-amphtml": "^4.0.2",
+    "react-dom": "17.0.2",
+    "react-query": "^3.13.2",
+    "typescript": "^4.2.3"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.10",
+    "@typescript-eslint/eslint-plugin": "^4.20.0",
+    "@typescript-eslint/parser": "^4.20.0",
+    "eslint": "^7.23.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.23.1",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "husky": "^6.0.0",
+    "lint-staged": "^10.5.4",
+    "prettier": "2.2.1"
   }
 }
