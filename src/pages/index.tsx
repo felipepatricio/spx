@@ -1,6 +1,8 @@
-import Card from "components/Card";
+import { lazy } from 'react'
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
+
+const Card = lazy(() => import("components/Card"));
 
 export default function Home({data}: any) {
   return (
