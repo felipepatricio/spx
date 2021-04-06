@@ -1,8 +1,6 @@
-import { lazy } from 'react'
+import Card from "components/Card";
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
-
-const Card = lazy(() => import("components/Card"));
 
 export default function Home({data}: any) {
   return (
@@ -12,7 +10,7 @@ export default function Home({data}: any) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <Card data={data} />
+        {data && <Card data={data} />}
       </main>
     </div>
   );
