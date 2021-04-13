@@ -1,3 +1,3 @@
-export default function Routes() {
-  return <h1>Routes</h1>
-}
+const Routes = (): any => <h1>Routes</h1>;
+
+export default Routes;
