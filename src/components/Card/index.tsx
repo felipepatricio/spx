@@ -14,11 +14,6 @@ import { format } from "date-fns";
 import styles from "./styles/Card.module.css";
 
 const Card = ({ data }: any) => {
-  const [expanded, setExpanded] = React.useState(false);
-
-  const handleExpandClick = () => {
-    setExpanded(!expanded);
-  };
 
   return (
     <ul className={styles.container}>

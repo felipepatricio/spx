@@ -53,13 +53,9 @@ export default function Home({ data }: any) {
         </Toolbar>
       </AppBar>
       <Drawer
-        // className={classes.drawer}
         variant="persistent"
         anchor="left"
         open={openDrawer}
-        // classes={{
-        //   paper: classes.drawerPaper,
-        // }}
       >
         <div
         // className={classes.drawerHeader}
@@ -74,26 +70,15 @@ export default function Home({ data }: any) {
         </div>
         <Divider />
         <List>
-          {["Next Launch", "Launches", "Rockets", "Drafts"].map((text, index) => (
+          {["Next Launch", "Launches", "Rockets", "Drafts"].map((text) => (
             <ListItem button key={text}>
               <ListItemIcon>
-                {/*{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}*/}
               </ListItemIcon>
               <ListItemText primary={text} />
             </ListItem>
           ))}
         </List>
         <Divider />
-        <List>
-          {["All mail", "Trash", "Spam"].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemIcon>
-                {/*{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}*/}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItem>
-          ))}
-        </List>
       </Drawer>
       <div className={styles.container}>
         <Head>
