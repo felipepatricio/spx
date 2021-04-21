@@ -32,5 +32,9 @@
     "src/components",
     "next.config.js",
     "src/helpers/externs/ads.js"
+  ],
+  "typeRoots": [
+    "../node_modules/@types",
+    "../@types"
   ]
 }

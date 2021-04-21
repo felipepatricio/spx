@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Head from "next/head";
+import LazyLoad from "react-lazyload";
 import {
   AppBar,
   Divider,
@@ -16,10 +17,9 @@ import {
 import MenuIcon from "@material-ui/icons/Menu";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
+import Card from "components/Card";
 
 import styles from "../styles/Home.module.css";
-
-const Card = React.lazy(() => import('components/Card'));
 
 export default function Home({ data }: any) {
   const [openDrawer, setOpenDrawer] = useState<boolean>(false);
@@ -74,13 +74,11 @@ export default function Home({ data }: any) {
           <title>SpaceX</title>
           <link rel="icon" href="/favicon.ico" />
         </Head>
-        <main className={styles.main}>
-          {data && (
-            <>
-              <Card data={data} />
-            </>
-          )}
-        </main>
+        <main className={styles.main}>{data && (
+          <LazyLoad height={320}>
+            <Card data={data} />
+          </LazyLoad>
+        )}</main>
       </div>
     </>
   );
